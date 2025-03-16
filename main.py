@@ -6,6 +6,7 @@ from cvzone.HandTrackingModule import HandDetector
 cap = cv2.VideoCapture(0)
 detector = HandDetector(maxHands=1)
 
+
 while True:
     success, image = cap.read()
     hands, image = detector.findHands(image, draw=False, flipType=True)  # keep the flipType True, or you will face counting problems with the thumb
